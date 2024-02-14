@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Contact | Fashion Collection</title>
+    <meta neme="keywords" content="ファッション,通販,ネットショップ,服,おしゃれ">
+    <meta name="description" content="トレンドに合わせた様々な服を取り扱うファッション通販サイトです。">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="contact-page">
+    <div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <button class="menu__openBtn">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <title>メニューを開く</title>
+                        <path clip-rule="evenodd"
+                            d="m4.25 8c0-.41421.33579-.75.75-.75h14c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.33579-.75-.75zm0 4c0-.4142.33579-.75.75-.75h14c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-14c-.41421 0-.75-.3358-.75-.75zm.75 3.25c-.41421 0-.75.3358-.75.75s.33579.75.75.75h14c.4142 0 .75-.3358.75-.75s-.3358-.75-.75-.75z"
+                            fill-rule="evenodd" />
+                    </svg>
+                </button>
+                <div class="menu__panel">
+                    <button class="menu__closeBtn">
+                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <title>メニューを閉じる</title>
+                            <path clip-rule="evenodd"
+                                d="m7.53033 6.46967c-.29289-.29289-.76777-.29289-1.06066 0s-.29289.76777 0 1.06066l4.46963 4.46967-4.46963 4.4697c-.29289.2929-.29289.7677 0 1.0606s.76777.2929 1.06066 0l4.46967-4.4696 4.4697 4.4696c.2929.2929.7677.2929 1.0606 0s.2929-.7677 0-1.0606l-4.4696-4.4697 4.4696-4.46967c.2929-.29289.2929-.76777 0-1.06066s-.7677-.29289-1.0606 0l-4.4697 4.46963z"
+                                fill-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul class="menu__nav">
+                        <li class="menu__list"><a href="../index.html#shop" class="menu__link">Online Shop</a></li>
+                        <li class="menu__list"><a href="https://twitter.com/home?lang=ja" target="_blank"
+                                class="menu__link">Twitter</a></li>
+                        <li class="menu__list"><a href="https://www.instagram.com/" target="_blank"
+                                class="menu__link">Instagram</a></li>
+                        <li class="menu__list"><a href="https://www.youtube.com/" target="_blank"
+                                class="menu__link">Youtube</a></li>
+                        <li class="menu__list"><a href="#" class="menu__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="loading">
+                <p class="loading__txt">loading...</p>
+                <div class="loading__screen"></div>
+            </div>
+
+            <section class="contact">
+                <div class="contact__container">
+                    <h1 class="contact__ttl">Contact</h1>
+                    <p class="contact__txt">お気軽にお問い合わせください。</p>
+
+                    <form id="contactForm" class="form" action="#" method="post">
+                        <div class="form__container">
+                            <div class="form__box">
+                                <label for="name" class="form__label">お名前</label>
+                                <input id="name" class="form__input" type="text" required>
+                            </div>
+                            <div class="form__box">
+                                <label for="type" class="form__label">お問い合わせ内容</label>
+                                <input id="type" class="form__input" type="radio" required>
+                            </div>
+                            <div class="form__box">
+                                <label for="message" class="form__label">メッセージ</label>
+                                <textarea id="message" class="form__message" required></textarea>
+                            </div>
+                            <div class="form__btn">
+                                <input type="submit" class="form__submit" value="送信">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <section id="shop" class="shop">
+                <div class="shop__container">
+                    <h2 class="shop__ttl fadeIn">Shop</h2>
+                    <p class="shop__txt fadeIn">いつでも送料無料。便利なオンラインショップをご利用ください。</p>
+                    <p class="shop__btn fadeIn"><a href="#" class="shop__link">オンラインショップ</a></p>
+
+                    <div class="shop__box">
+                        <p class="shop__name fadeIn">六本木店</p>
+                        <ul class="shop__info fadeIn">
+                            <li class="shop__list">東京都港区六本木2-4-5</li>
+                            <li class="shop__list">営業日：金・土・日・祝</li>
+                            <li class="shop__list">営業時間：11:00〜18:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copy"><small class="footer__small">@WCB Fashion Collection 2024</small></p>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

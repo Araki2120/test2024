@@ -1,0 +1,229 @@
+@use "../global/" as *;
+
+#top {
+
+    .loading {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: $grey;
+        animation: loadingAnimation 2s 1.2s forwards;
+        z-index: 50;
+
+        &__txt {
+            font-size: 2rem;
+            font-family: $oswald;
+            animation: loadingTxt 1.2s forwards;
+        }
+
+        &__screen {
+            position: fixed;
+            inset: 0;
+            background: $l-green;
+            transform: translateY(100vh);
+            animation: loadingScreen 2s .8s forwards;
+        }
+    }
+
+    .mv {
+        height: 100vh;
+        margin-bottom: 8rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 100vh;
+            background: url(../images/bg-hero.jpg) center center / cover;
+        }
+
+        &__ttl {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            @include ttl;
+            font-size: max(12vw, 3rem);
+            line-height: 1.2;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+    }
+
+    .concept {
+        margin-bottom: 8rem;
+        background-image: linear-gradient(to right, transparent 0%, transparent 20%, $grey 20%, $grey 100%);
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16rem;
+        }
+
+        &__container {
+            @include secContainer;
+        }
+
+        &__ttl {
+            @include ttl;
+        }
+
+        &__txt {
+            @include txt;
+            text-align: left;
+        }
+
+        &__pic {
+            padding-bottom: 0.4rem;
+
+            @media screen and (min-width: 768px) {
+                margin: -6rem 0;
+            }
+        }
+
+        &__img {
+
+            @media screen and (min-width: 768px) {
+                max-width: 38rem;
+            }
+        }
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__mainPic {
+            position: relative;
+            width: min(100%, calc(38rem - 2rem));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 768px) {
+                width: 50vw;
+                height: 100vh;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                width: calc(100% - 2rem);
+                height: calc(100% - 2.5rem);
+                border: 3px solid $white;
+            }
+        }
+
+        &__mainImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &__container {
+            @include secContainer;
+
+            @media screen and (min-width: 768px) {
+                width: 30vw;
+            }
+        }
+
+        &__ttl {
+            @include ttl;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+        }
+
+        &__item {
+            object-fit: cover;
+            aspect-ratio: 3 / 4;
+            cursor: pointer;
+
+            @media screen and (min-width: 768px) {
+                &:hover {
+                    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+                    transition: .4s;
+                }
+            }
+
+        }
+    }
+
+    .shop {
+        position: relative;
+        height: 40rem;
+        margin-top: 16rem;
+        background: url(../images/bg-shop.jpg) center top / cover;
+
+        @media screen and (min-width: 768px) {
+            height: 50rem;
+            margin-top: 20rem;
+        }
+
+        &__container {
+            position: absolute;
+            top: -8rem;
+            left: 0;
+            right: 0;
+            width: min(90vw, 38rem);
+            margin: 0 auto;
+            padding: 3rem;
+            background: $white;
+        }
+
+        &__ttl {
+            @include ttl;
+        }
+
+        &__txt {
+            @include txt;
+        }
+
+        &__btn {
+            width: fit-content;
+            margin: 0 auto 3rem;
+        }
+
+        &__link {
+            padding: 1rem;
+            background: $brown;
+            color: $white;
+            border: 1px solid $brown;
+            transition: 0.4s;
+
+            &:hover {
+                background: $l-green;
+                color: $brown;
+            }
+        }
+
+        &__name {
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+            font-size: 1.17rem;
+            border-top: 1px solid $grey;
+        }
+
+        &__list {
+            line-height: 1.7;
+        }
+    }
+}

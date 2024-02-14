@@ -1,0 +1,29 @@
+@use "../setting" as *;
+
+@keyframes loadingAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loadingTxt {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loadingScreen {
+    100% {
+        transform: translateY(-100vh);
+    }
+}

@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+.wrapper {
+    color: $brown;
+    background: url('../images/bg-shadow.jpg') right bottom / cover fixed;
+    text-align: center;
+}
+
+a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}

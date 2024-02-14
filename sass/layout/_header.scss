@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+.menu {
+    &__openBtn {
+        @include btn;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin-top: 0.25rem;
+            fill: $brown;
+        }
+    }
+
+    &__panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: max(32vw, 20rem);
+        height: 100vh;
+        padding: 8rem 2rem 2rem;
+        background: $brown;
+        font-family: $oswald;
+        box-shadow: 0 0 2rem $brown;
+        transform: translateX(100%);
+        transition: .5s;
+        z-index: 20;
+    }
+
+    &__closeBtn {
+        @include btn($l-green);
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            margin-top: 0.25rem;
+            fill: $l-green;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    &__list {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(20px);
+        transition: .4s;
+    }
+
+    &__link {
+        padding: 0.5rem;
+        color: $l-green;
+        font-size: 2rem;
+        transition: .4s;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}

@@ -1,0 +1,167 @@
+@use "../global/" as *;
+
+#contact-page {
+    .loading {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        background: $grey;
+        animation: loadingAnimation 2s 1.2s forwards;
+        z-index: 50;
+
+        &__txt {
+            font-size: 2rem;
+            font-family: $oswald;
+            animation: loadingTxt 1.2s forwards;
+        }
+
+        &__screen {
+            position: fixed;
+            inset: 0;
+            background: $l-green;
+            transform: translateY(100vh);
+            animation: loadingScreen 2s .8s forwards;
+        }
+    }
+
+    .contact {
+        height: 100vh;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 100vh;
+            background: url(../images/bg-hero.jpg) center center / cover;
+        }
+
+        &__container {
+            position: absolute;
+            width: 100%;
+            margin-top: 8rem;
+            z-index: 5;
+        }
+
+        &__ttl {
+            margin-bottom: 1rem;
+            @include ttl;
+            line-height: 1.2;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__txt {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .form {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: min(90vw, 38rem);
+            margin: 0 auto;
+            padding: 3rem;
+            background: #fff;
+        }
+
+        &__box {
+            width: min(100%, 40vw);
+            margin: 0 auto;
+        }
+
+        &__label {
+            display: block;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        &__input,
+        &__message {
+            width: 100%;
+            border: 1px solid $brown;
+
+            &:focus {
+                background: $l-green;
+            }
+        }
+
+        &__submit {
+            width: fit-content;
+            padding: 1rem 3rem;
+            background: $brown;
+            color: $white;
+            border: 1px solid $brown;
+            transition: 0.4s;
+
+            &:hover {
+                background: $l-green;
+                color: $brown;
+            }
+        }
+    }
+
+    .shop {
+        position: relative;
+        height: 40rem;
+        margin-top: 24rem;
+        background: url(../images/bg-shop.jpg) center top / cover;
+
+        @media screen and (min-width: 768px) {
+            height: 50rem;
+        }
+
+        &__container {
+            position: absolute;
+            top: -8rem;
+            left: 0;
+            right: 0;
+            width: min(90vw, 38rem);
+            margin: 0 auto;
+            padding: 3rem;
+            background: $white;
+        }
+
+        &__ttl {
+            @include ttl;
+        }
+
+        &__txt {
+            @include txt;
+        }
+
+        &__btn {
+            width: fit-content;
+            margin: 0 auto 3rem;
+        }
+
+        &__link {
+            padding: 1rem;
+            background: $brown;
+            color: $white;
+            border: 1px solid $brown;
+            transition: 0.4s;
+
+            &:hover {
+                background: $l-green;
+                color: $brown;
+            }
+        }
+
+        &__name {
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+            font-size: 1.17rem;
+            border-top: 1px solid $grey;
+        }
+
+        &__list {
+            line-height: 1.7;
+        }
+    }
+}

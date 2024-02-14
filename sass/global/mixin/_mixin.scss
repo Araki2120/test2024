@@ -1,0 +1,38 @@
+@use "../setting" as *;
+
+@mixin btn($border-color: $brown) {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    transition: .4s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@mixin ttl {
+    margin-bottom: 2rem;
+    font-size: min(10vw, 4rem);
+    font-family: $oswald;
+    font-weight: bold;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 3rem;
+    }
+}
+
+@mixin txt {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+@mixin secContainer {
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}

@@ -1,0 +1,29 @@
+@use "../global/" as *;
+
+#top,
+#contact-page {
+    .openMenu {
+        transform: translateX(0);
+        transition: 1.4s; //出る時だけ遅く
+    }
+
+    .slideList {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        transition: 2.4s;
+    }
+
+    .fadeIn {
+        opacity: 0;
+        filter: blur(.4rem);
+        transform: translateY(4rem);
+        transition: 2s;
+    }
+
+    .fadeInAnimation {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}

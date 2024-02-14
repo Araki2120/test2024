@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.footer {
+    position: relative;
+
+    &__copy {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+}
