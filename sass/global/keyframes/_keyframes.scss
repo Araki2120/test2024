@@ -1,5 +1,16 @@
 @use "../setting" as *;
 
+// //GSAPアニメーション用
+// @keyframes anim {
+//     0% {
+
+//     }
+//     100% {
+
+//     }
+// }
+
+//その他アニケーション用
 @keyframes loadingAnimation {
     0% {
         opacity: 1;
